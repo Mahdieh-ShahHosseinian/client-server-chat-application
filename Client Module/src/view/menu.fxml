@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="rootPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Menu">
+   <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+            <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                      <Label alignment="CENTER" prefHeight="31.0" prefWidth="114.0" text="Simple Messenger" />
+                  <ImageView fx:id="image" fitHeight="140.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            </top>
+            <center>
+                <VBox focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="328.0" spacing="10.0" BorderPane.alignment="CENTER">
+                    <children>
+                  <Label fx:id="alreadyLoggedInLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="160.0">
+                     <VBox.margin>
+                        <Insets left="6.0" />
+                     </VBox.margin></Label>
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="225.0" spacing="5.0">
+                     <children>
+                              <TextField fx:id="usernameField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.6" prefWidth="120.0" promptText="Enter username">
+                                  <opaqueInsets>
+                                      <Insets />
+                                  </opaqueInsets>
+                              </TextField>
+                        <Label fx:id="invalidUsernameLabel" prefHeight="26.0" prefWidth="157.0" />
+                     </children></HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                              <PasswordField fx:id="passwordField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.6" prefWidth="120.0" promptText="Enter password">
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin></PasswordField>
+                        <Label fx:id="wrongPasswordLabel" prefHeight="26.0" prefWidth="162.0" />
+                     </children>
+                  </HBox>
+                        <Button fx:id="loginButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" text="Login">
+                            <VBox.margin>
+                                <Insets left="60.0" />
+                            </VBox.margin>
+                        </Button>
+                  <Label fx:id="registerLabel" onMouseClicked="#showRegisterDialog" prefHeight="18.0" prefWidth="102.0" style="-fx-underline: true;" text="Register now here!" textFill="#4285f4">
+                     <VBox.margin>
+                        <Insets left="33.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                    </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets bottom="90.0" left="165.0" />
+               </BorderPane.margin>
+                </VBox>
+            </center>
+        </BorderPane>
+   </children>
+</Pane>

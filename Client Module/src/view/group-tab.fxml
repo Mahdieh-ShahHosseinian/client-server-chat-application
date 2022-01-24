@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GroupTab">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="314.0" prefWidth="600.0">
+            <left>
+                <TextArea fx:id="textArea" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="369.0" wrapText="true" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets left="2.5" />
+                    </BorderPane.margin>
+                </TextArea>
+            </left>
+            <bottom>
+                <HBox fx:id="sendBox" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextArea fx:id="text" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="546.0" promptText="Write a message...">
+                            <HBox.margin>
+                                <Insets left="2.5" />
+                            </HBox.margin>
+                        </TextArea>
+                        <Button fx:id="sendButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendMessage" text="Send" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="2.5" />
+                    </BorderPane.margin>
+                </HBox>
+            </bottom>
+            <right>
+                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="227.0" spacing="10.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="joinLeaveButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#joinLeave" text="Join group">
+                     <VBox.margin>
+                        <Insets top="2.5" />
+                     </VBox.margin></Button>
+                        <Button fx:id="showOnlineUsersButton" contentDisplay="CENTER" disable="true" layoutX="81.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showOnlineUsers" text="Show online users" />
+                        <ListView fx:id="onlineUserList" prefHeight="193.0" prefWidth="227.0">
+                            <VBox.margin>
+                                <Insets right="2.5" />
+                            </VBox.margin>
+                        </ListView>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets top="3.0" />
+                    </padding>
+                </VBox>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>

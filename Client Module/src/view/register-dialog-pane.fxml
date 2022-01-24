@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterDialogPane">
+    <content>
+        <VBox alignment="CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="430.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="396.0" textFill="RED">
+                    <VBox.margin>
+                        <Insets right="165.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="285.0" spacing="5.0">
+                    <children>
+                        <TextField fx:id="usernameField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.6" prefWidth="120.0" promptText="Enter username">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TextField>
+                        <Label fx:id="invalidUsernameLabel" prefHeight="26.0" prefWidth="157.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="287.0" spacing="5.0">
+                    <children>
+                        <PasswordField fx:id="passwordField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.6" prefWidth="120.0" promptText="Enter password">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </PasswordField>
+                        <Label fx:id="invalidPasswordLabel" prefHeight="26.0" prefWidth="157.0" />
+                    </children>
+                </HBox>
+                <Button fx:id="registerButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#register" text="Register">
+                    <VBox.margin>
+                        <Insets right="165.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets bottom="50.0" left="165.0" />
+            </BorderPane.margin>
+         <padding>
+            <Insets left="165.0" />
+         </padding>
+        </VBox>
+    </content>
+</DialogPane>

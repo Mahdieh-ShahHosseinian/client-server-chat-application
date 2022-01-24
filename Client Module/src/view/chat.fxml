@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ChatController">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <TabPane fx:id="mainTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="Direct">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TabPane fx:id="directTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                                <Tab text="Home">
+                                                    <content>
+                                                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0">
+                                                            <children>
+                                                                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="314.0" prefWidth="600.0">
+                                                                    <center>
+                                                                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="204.0" spacing="1.0" BorderPane.alignment="CENTER">
+                                                                            <children>
+                                                                                <HBox prefHeight="24.0" prefWidth="200.0" spacing="2.5">
+                                                                                    <children>
+                                                                                        <TextField fx:id="searchIDTextField" onMouseClicked="#handleOnMouseClickedIDLabel" promptText="Enter ID" />
+                                                                                        <Button fx:id="searchIDButton" mnemonicParsing="false" onAction="#searchID" text="Search" />
+                                                                                    </children>
+                                                                                </HBox>
+                                                                                <Label fx:id="searchIDLabel" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="202.0" />
+                                                                                <Button fx:id="startANewChatButton" disable="true" mnemonicParsing="false" onAction="#startNewChat" text="Start a new chat" />
+                                                                                <Label fx:id="startANewChatLabel" alignment="CENTER" layoutX="11.0" layoutY="47.0" prefHeight="26.0" prefWidth="134.0">
+                                                                                    <VBox.margin>
+                                                                                        <Insets />
+                                                                                    </VBox.margin>
+                                                                                </Label>
+                                                                            </children>
+                                                                            <BorderPane.margin>
+                                                                                <Insets />
+                                                                            </BorderPane.margin>
+                                                                            <padding>
+                                                                                <Insets top="10.0" />
+                                                                            </padding>
+                                                                        </VBox>
+                                                                    </center>
+                                                                </BorderPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </Tab>
+                                            </tabs>
+                                        </TabPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="groupsTab" text="Groups">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TabPane fx:id="groupTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                            </tabs>
+                                        </TabPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </children>
+</StackPane>
