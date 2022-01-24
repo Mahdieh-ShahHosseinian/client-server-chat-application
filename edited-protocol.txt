@@ -1,0 +1,50 @@
+1. Register
+    request:
+        Make -Option user:user_name -Option pass:password
+    response:
+        Make -Option user:user_name -Option res:accepted
+        Make -Option user:user_name -Option res:not-accepted reason:str
+
+2. Login
+    request:
+        Connect -Option user:user_name -Option pass:password
+    response:
+        Connect -Option user:user_name -Option res:connected
+        Connect -Option user:user_name -Option res:not-connected reason:str
+
+3. Join Group
+    request:
+        Group -Option gname:
+    response:
+to others-> Group -Option from:Group_Name -Option message:user_name joined the chat room
+to user->   Group -Option from:Group_Name -Option message:Hi user_name, welcome to the chat room.
+
+4. Group Users Presence
+    request:
+        Users -Option gname:group_name
+    response:
+        Users -Option gname:group_name -Option USER_LIST:user_name1|user_name2|user_name3|user_name4
+
+5. Send Group Message
+    request:
+        GM -Option to:GAPNAME -Option message_len:# -Option message_body:msg
+    response:
+        GM -Option from:username -Option to:GPNAME -Option message_len:# -Option message_body:msg
+
+6. Send Private Message
+      request:
+          PM -Option to:user_name -Option message_len:# -Option message_body:msg
+      response:
+          PM -Option from:username -Option to:user_name -Option message_len:# -Option message_body:msg
+
+7. Leave Group
+    request:
+            End -Option gname:GAPNAME
+    response:
+to others-> Group -Option from:Group_Name -Option message:user_name left the chat room.
+
+8. Leave Server
+     request:
+             End -Option user:user_name
+     response:
+to others in PM->
