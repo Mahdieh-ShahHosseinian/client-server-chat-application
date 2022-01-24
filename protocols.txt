@@ -1,0 +1,51 @@
+1. Register
+    request:
+        Make -Option user:user_name -Option pass:password
+    response:
+        User Accepted -Option user:user_name
+        User Not Accepted reason:str
+2. Login
+    request:
+        Connect -Option user:user_name -Option pass:password
+    response:
+        Connected -Option user:user_name
+        ERROR -Option reason:str
+
+3. Join Group
+    request:
+        v.0: Group -Option user:user_name -Option gname:Group_Name
+        v.0.1 Group -Option gname:Group_Name
+    response:
+        v.0: to others: user_name joined the chat room.
+        v.0.1: to others: Group -Option from:Group_Name user_name joined the chat room. ***
+        to user: Hi user_name, welcome to the chat room.
+
+4. Group Users Presence
+    request:
+        v.0: Users -Option user:user_name
+        v.0.1: Users -Option gname:group_name
+    response:
+        v.0: USER_LIST:
+        v.0.1: Users -Option gname:group_name USER_LIST:
+        user_name1|user_name2|user_name3|user_name4
+
+5. Send Group Message
+    request:
+        GM -Option to:GAPNAME -Option message_len:# -Option message_body:msg
+    response:
+        GM -Option from:username -Option to:GPNAME -Option message_len:# -Option message_body:msg
+
+6. Send Private Message
+      request:
+          PM -Option to:user_name -Option message_len:# -Option message_body:msg
+      response:
+          PM -Option from:username -Option to:user_name -Option message_len:# -Option message_body:msg
+
+7. Leave Group
+    request:
+        v.0: End -Option id:user_name OR GAPNAME
+        v.0.1: for group chat: End -Option gname:GAPNAME
+               for private chat: End
+    response:
+        to others (in group to all other users/in private chat only to the other user):
+            user_name left the chat room.
