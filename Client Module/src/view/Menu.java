@@ -51,7 +51,7 @@ public class Menu implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         try {
-            image.setImage(new Image(new FileInputStream("D:\\Semester 5\\Networking\\project code\\SCM\\Client Module\\src\\view\\icon.png")));
+            image.setImage(new Image(new FileInputStream("Client Module\\src\\view\\icon.png")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
